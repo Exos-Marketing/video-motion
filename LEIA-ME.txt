@@ -1,0 +1,104 @@
+SKILL VIDEO MOTION
+Videos de motion design escritos em codigo pelo Claude.
+Por Mauricio Magnavita (@mauriciomagnavitarocha) · Exos Marketing (@exosmkt)
+
+
+O QUE E ISSO
+
+Uma skill e um pacote de instrucoes que ensina o Claude a fazer uma tarefa do jeito certo.
+Esta ensina o Claude a criar videos de motion design: texto animado no ritmo da voz, cartoes,
+numeros, mapa. Voce descreve o video, ele escreve o roteiro, monta as cenas e entrega o MP4,
+na horizontal e na vertical (Reels, Shorts, TikTok).
+
+Voce nao abre editor de video. Tudo acontece conversando.
+
+
+DO QUE VOCE PRECISA
+
+1. Claude Code instalado no computador (Mac, Linux ou Windows com WSL).
+   https://claude.com/claude-code
+2. Node.js 18 ou mais novo ......  https://nodejs.org
+3. ffmpeg .......................  https://ffmpeg.org
+4. Python 3 (ja vem no Mac e no Linux)
+
+Nao sabe se tem? Depois de instalar a skill, abra o Claude Code e escreva:
+"confere se eu tenho node, ffmpeg e python instalados e me ajuda a instalar o que faltar".
+
+
+COMO INSTALAR (1 minuto)
+
+Jeito mais facil: abra o Claude Code e cole
+
+   Instala esta skill na minha pasta de skills (~/.claude/skills/video-motion):
+   https://github.com/Exos-Marketing/video-motion
+
+Na mao, se voce baixou o arquivo:
+
+1. Descompacte. Vai aparecer uma pasta chamada  video-motion
+2. Mova essa pasta para dentro de:
+
+   Mac e Linux:   ~/.claude/skills/
+   Windows:       C:\Users\SEU-USUARIO\.claude\skills\
+
+   (A pasta .claude fica escondida. No Mac, no Finder, aperte Cmd + Shift + G e cole
+   ~/.claude/skills  — se a pasta skills nao existir, crie.)
+
+Nos dois casos, feche e abra o Claude Code de novo.
+
+
+COMO USAR
+
+Abra o Claude Code numa pasta sua (por exemplo, uma pasta "videos") e escreva o pedido.
+Quanto mais voce disser, melhor sai. Exemplo:
+
+   Cria um video motion de 45 segundos, na vertical, para o Instagram.
+   Tema: [sobre o que e o video e para quem].
+   No fim, a pessoa deve [comentar a palavra X / clicar no link / me seguir].
+   Cor da marca: #FF6A00. Assina com @seuperfil.
+   Sem narracao por enquanto.
+
+O Claude vai te mostrar o roteiro antes de montar. Leia, ajuste, aprove. Depois ele monta as
+cenas, te mostra uma previa em imagem e so entao gera o video.
+
+Para ver o que a skill faz antes de criar o seu, peca:
+   "renderiza o video de exemplo da skill video-motion na vertical"
+
+
+NARRACAO
+
+Tres jeitos, voce escolhe:
+
+- Gravar a sua voz no celular lendo o roteiro e mandar o arquivo para o Claude.
+- Gerar a voz numa ferramenta de inteligencia artificial e mandar os arquivos.
+- Sem voz: o video sai mudo e voce poe a musica no proprio Instagram.
+
+Com voz, o Claude sincroniza cada palavra da tela com a fala. Ele vai te pedir para instalar
+um programa de transcricao (gratuito) na primeira vez.
+
+
+O QUE ESPERAR
+
+- O primeiro video demora mais: o Claude instala as ferramentas (uns 150 MB) e voce ainda esta
+  pegando o jeito de pedir.
+- Gerar o arquivo final leva alguns minutos por formato.
+- E motion grafico: texto, formas, numeros, icones, mapa. Nao cria pessoas nem cenas filmadas.
+- O video de exemplo que vem junto e uma peca real da Exos. Serve de modelo. O texto, os
+  numeros e a assinatura do seu video precisam ser os seus.
+- Se usar voz gerada por inteligencia artificial, marque o rotulo de conteudo feito com IA na
+  hora de postar.
+
+
+DEU PROBLEMA?
+
+Cole a mensagem de erro no proprio Claude Code e peca para ele resolver. Quase sempre e uma
+ferramenta que falta instalar.
+
+Fez um video com a skill? Marca @mauriciomagnavitarocha que eu quero ver.
+
+
+CREDITOS E LICENCA
+
+Motor e instrucoes: Mauricio Magnavita / Exos Marketing. Uso livre para criar os seus videos,
+inclusive comerciais. Nao revenda a skill.
+Fontes Inter e JetBrains Mono, sob a SIL Open Font License 1.1 (texto em
+assets/engine/assets/LICENCAS.txt).

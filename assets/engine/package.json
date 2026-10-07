@@ -1,0 +1,9 @@
+{
+  "name": "video-motion",
+  "private": true,
+  "type": "module",
+  "description": "Motor de video motion escrito como codigo: a pagina desenha, o render fotografa quadro a quadro.",
+  "dependencies": {
+    "playwright": "^1.50.0"
+  }
+}

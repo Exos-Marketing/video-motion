@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Vídeo motion</title>
+<style>
+@font-face{font-family:Inter;src:url(assets/inter.woff2) format('woff2');font-weight:100 900;font-display:block}
+@font-face{font-family:Mono;src:url(assets/mono.woff2) format('woff2');font-weight:100 800;font-display:block}
+:root{--g:#30DC68;--gd:rgba(48,220,104,.38);--red:#ff3b3b}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#000;overflow:hidden}
+#wrap{position:relative;overflow:hidden;background:#050505;font-family:Inter,system-ui,sans-serif;color:#fff}
+#bg{position:absolute;inset:0;background:
+  radial-gradient(ellipse 75% 55% at 50% 0%,rgba(48,220,104,.17),transparent 70%),
+  linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px) 0 0/64px 64px,
+  linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px) 0 0/64px 64px}
+#floor{position:absolute;left:-40%;right:-40%;bottom:-4%;height:36%;transform-origin:50% 0;transform:perspective(620px) rotateX(66deg);
+  background:linear-gradient(rgba(48,220,104,.26) 1.5px,transparent 1.5px) 0 0/96px 96px,
+             linear-gradient(90deg,rgba(48,220,104,.26) 1.5px,transparent 1.5px) 0 0/96px 96px;
+  -webkit-mask-image:linear-gradient(transparent 5%,#000 70%);mask-image:linear-gradient(transparent 5%,#000 70%)}
+#stage{position:absolute;inset:0}
+.sc{position:absolute;inset:0;opacity:0;transform-origin:50% 50%}
+#flash{position:absolute;inset:0;opacity:0;pointer-events:none;
+  background:radial-gradient(ellipse at 50% 45%,rgba(200,255,220,.95),rgba(48,220,104,.4) 45%,transparent 78%)}
+#streak{position:absolute;left:-10%;width:120%;height:3px;opacity:0;
+  background:linear-gradient(90deg,transparent,#dfffe9 44%,#fff 50%,#dfffe9 56%,transparent);box-shadow:0 0 26px 7px rgba(48,220,104,.7)}
+#grain{position:absolute;inset:0;opacity:.075;mix-blend-mode:screen;pointer-events:none}
+#vig{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,transparent 52%,rgba(0,0,0,.6) 100%)}
+#black{position:absolute;inset:0;background:#030303;opacity:0;pointer-events:none}
+
+/* HUD fixo */
+.hud{position:absolute;font-family:Mono,monospace;font-weight:500;font-size:17px;letter-spacing:.2em;color:rgba(255,255,255,.46);text-transform:uppercase;white-space:nowrap}
+#hudN{left:56px;top:42px} #hudRec{right:56px;top:42px} #hudL{left:56px;bottom:38px} #hudR{right:56px;bottom:38px}
+.cross{position:absolute;width:15px;height:15px;opacity:.32}
+.cross:before,.cross:after{content:"";position:absolute;background:#fff}
+.cross:before{left:7px;top:0;width:1.5px;height:15px}.cross:after{top:7px;left:0;height:1.5px;width:15px}
+
+/* tipografia */
+.cap{font-weight:800;letter-spacing:-.045em;line-height:1.1;white-space:nowrap;font-size:64px}
+.P .cap{white-space:normal}
+.cap.c{text-align:center}
+.cap.thin{font-weight:500;letter-spacing:-.04em}
+.cap span{display:inline-block;opacity:0}
+.g{color:var(--g);text-shadow:0 0 30px rgba(48,220,104,.55)}
+.mono{font-family:Mono,monospace;font-weight:500;letter-spacing:.03em}
+.lbl{font-family:Mono,monospace;font-weight:500;font-size:18px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);white-space:nowrap}
+.big{font-weight:900;letter-spacing:-.055em;line-height:.9;text-transform:uppercase;white-space:nowrap;transform-origin:50% 55%}
+.big.n{text-transform:none}
+.glow{text-shadow:0 0 44px rgba(48,220,104,.8),0 0 120px rgba(48,220,104,.45)}
+.card{border:1.5px solid var(--gd);border-radius:18px;background:linear-gradient(180deg,rgba(48,220,104,.11),rgba(48,220,104,.035));
+  box-shadow:0 0 44px rgba(48,220,104,.10),inset 0 0 34px rgba(48,220,104,.05)}
+.card.on{border-color:rgba(48,220,104,.95);box-shadow:0 0 60px rgba(48,220,104,.35),inset 0 0 40px rgba(48,220,104,.14)}
+.laser{height:6px;background:var(--red);border-radius:3px;transform-origin:0 50%;
+  box-shadow:0 0 18px 5px rgba(255,60,60,.85),0 0 70px 12px rgba(255,60,60,.4)}
+.st{fill:none;stroke:var(--g);stroke-width:2.5}
+.dash{stroke-dasharray:7 9}
+.ico{fill:none;stroke:var(--g);stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.ln{background:rgba(120,255,170,.8);box-shadow:0 0 14px rgba(48,220,104,.8)}
+.pill{border:1.5px solid var(--gd);border-radius:999px;background:rgba(8,20,13,.85);box-shadow:0 0 36px rgba(48,220,104,.16)}
+.pill.on,.chip.on{border-color:rgba(48,220,104,.95);box-shadow:0 0 50px rgba(48,220,104,.4)}
+.tag{font-family:Mono,monospace;font-size:19px;letter-spacing:.16em;text-transform:uppercase;padding:9px 16px;border:1.5px solid var(--gd);border-radius:8px;
+  background:rgba(48,220,104,.07);color:#d9ffe6;white-space:nowrap}
+.hdr{font-family:Mono,monospace;font-size:19px;letter-spacing:.14em;color:rgba(255,255,255,.55);text-transform:none;white-space:nowrap}
+.dots i{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--gd);margin-right:7px}
+.sk{background:rgba(255,255,255,.07);border-radius:6px}
+.chip{font-family:Mono,monospace;font-size:20px;letter-spacing:.14em;text-transform:uppercase;padding:8px 16px;border-radius:8px;border:1.5px solid var(--gd);
+  background:rgba(5,14,9,.9);color:#d9ffe6;white-space:nowrap}
+.flag{border-radius:4px;box-shadow:0 0 0 1px rgba(255,255,255,.25)}
+.cl{font-family:Mono,monospace;white-space:pre;color:#cfe9d8;border-radius:8px}
+.cl b{font-weight:500;color:rgba(255,255,255,.3)}
+.cl .s{color:#8dffb4}.cl .k{color:#fff}
+</style>
+</head>
+<body>
+<div id="wrap">
+  <div id="bg"></div>
+  <div id="floor"></div>
+  <div id="stage"></div>
+  <div id="flash"></div>
+  <div id="streak"></div>
+  <div class="hud" id="hudN"></div><div class="hud" id="hudRec"></div>
+  <div class="hud" id="hudL"></div><div class="hud" id="hudR"></div>
+  <div class="cross" style="left:22px;top:22px"></div><div class="cross" style="right:22px;top:22px"></div>
+  <div class="cross" style="left:22px;bottom:22px"></div><div class="cross" style="right:22px;bottom:22px"></div>
+  <div id="vig"></div>
+  <div id="black"></div>
+  <div id="grain"></div>
+</div>
+<script src="js/core.js"></script>
+<script src="js/layout_L.js"></script>
+<script>if (OR === 'P') document.write('<script src="js/layout_P.js"><\/script>');</script>
+<script src="js/scenes_a.js"></script>
+<script src="js/scenes_b.js"></script>
+<script src="js/scenes_c.js"></script>
+<script>boot();</script>
+</body>
+</html>

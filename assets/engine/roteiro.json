@@ -1,0 +1,251 @@
+{
+ "_o_que_e": "Roteiro de exemplo: o video 'Um video desse nivel' (Exos). Troque TODO o texto pelo do seu video. Sem audio aqui, entao a linha do tempo sai no modo mudo; veja references/roteiro.md para ligar a narracao.",
+ "fps": 30,
+ "ppm": 190,
+ "inicio": 0.3,
+ "cauda": 1.6,
+ "pausa": 0.13,
+ "tempo": 1.0,
+ "clipes": [
+  {
+   "idioma": "pt"
+  },
+  {
+   "idioma": "pt"
+  },
+  {
+   "idioma": "pt",
+   "pausa_depois": 0.22
+  },
+  {
+   "idioma": "pt"
+  },
+  {
+   "idioma": "pt"
+  },
+  {
+   "idioma": "pt"
+  },
+  {
+   "idioma": "pt",
+   "pausa_depois": 0.2
+  },
+  {
+   "idioma": "pt"
+  },
+  {
+   "idioma": "pt"
+  },
+  {
+   "idioma": "pt"
+  },
+  {
+   "idioma": "pt",
+   "pausa_depois": 0.1
+  },
+  {
+   "idioma": "en",
+   "pausa_depois": 0.12
+  },
+  {
+   "idioma": "es",
+   "pausa_depois": 0.22
+  },
+  {
+   "idioma": "pt",
+   "pausa_depois": 0.22
+  },
+  {
+   "idioma": "pt",
+   "pausa_depois": 0.24
+  },
+  {
+   "idioma": "pt",
+   "pausa_depois": 0.62
+  },
+  {
+   "idioma": "pt"
+  }
+ ],
+ "cenas": [
+  {
+   "id": 1,
+   "partes": [
+    {
+     "clipe": 0,
+     "texto": "E se eu te dissesse que dá pra criar um *vídeo#big1 desse#big2 nível#big3"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "partes": [
+    {
+     "clipe": 0,
+     "texto": "sem câmera,#cam sem editor#edit e sem designer?#des"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "partes": [
+    {
+     "clipe": 1,
+     "texto": "E não, não é *template.#tpl"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "partes": [
+    {
+     "clipe": 2,
+     "texto": "Isso aqui é o Claude#claude Opus#opus *5.5.#ver"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "partes": [
+    {
+     "clipe": 3,
+     "texto": "Você não abre programa *nenhum.#nenhum Só#so *descreve como quer que fique.#fique"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "partes": [
+    {
+     "clipe": 4,
+     "texto": "Tipo:#tipo cria#p0 um vídeo de *um *minuto,#min com *texto *animado,#txt sobre vender curso#curso para *fora *do *Brasil.#br"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "partes": [
+    {
+     "clipe": 5,
+     "texto": "Ranking#r1 em 3D, mapa,#r2 comparação.#r3 Esses#e aqui saíram *assim.#assim"
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "partes": [
+    {
+     "clipe": 6,
+     "texto": "Só que tem um *detalhe#det que#que quase ninguém percebe.#perc"
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "partes": [
+    {
+     "clipe": 7,
+     "texto": "O Claude *não#nao gera o vídeo *direto.#dir"
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "partes": [
+    {
+     "clipe": 7,
+     "texto": "Ele *escreve#esc o vídeo como *código.#cod Texto,#l1 cor,#l2 movimento,#l3 tempo:#l4 tudo#tudo vira uma *linha.#linha"
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "partes": [
+    {
+     "clipe": 8,
+     "texto": "E aí esse código é *renderizado#rend *quadro#q1 *a *quadro.#q2"
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "partes": [
+    {
+     "clipe": 9,
+     "texto": "Em vez de roteiro,#a1 gravação,#a2 edição,#a3 legenda#a4 e exportação,#a5"
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "partes": [
+    {
+     "clipe": 9,
+     "texto": "é#e pedido,#n1 código,#n2 render,#n3 vídeo.#n4"
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "partes": [
+    {
+     "clipe": 10,
+     "texto": "E como é *código,#cod você pode falar:#falar muda#m1 a *cor.#m1e Deixa#m2 mais *rápido.#m2e"
+    }
+   ]
+  },
+  {
+   "id": 15,
+   "partes": [
+    {
+     "clipe": 10,
+     "texto": "Agora#ag em *inglês.#en0"
+    },
+    {
+     "clipe": 11,
+     "texto": "Now#en1 it speaks *English.#en2"
+    },
+    {
+     "clipe": 12,
+     "texto": "Y#es1 ahora, *español.#es2"
+    }
+   ]
+  },
+  {
+   "id": 16,
+   "partes": [
+    {
+     "clipe": 13,
+     "texto": "O mesmo vídeo,#mesmo em *qualquer#qq *idioma,#idi sem#sem regravar nada.#nada"
+    }
+   ]
+  },
+  {
+   "id": 17,
+   "partes": [
+    {
+     "clipe": 14,
+     "texto": "E é por isso que a *barreira#bar do idioma nunca foi tão *baixa#baixa pra vender curso fora do Brasil.#br A#exosA Exos#exos já vendeu cursos em *141#n141 *países.#paises E#e2 esse caminho nunca foi tão *curto.#curto"
+    }
+   ]
+  },
+  {
+   "id": 18,
+   "partes": [
+    {
+     "clipe": 15,
+     "texto": "Substitui#sub gravar com o expert?#exp Não.#nao Mas#mas sair de uma *ideia#ideia pra um vídeo *pronto#pronto em *três *idiomas,#tres sem abrir um editor,#editor é#eh bem#bem *absurdo.#abs"
+    }
+   ]
+  },
+  {
+   "id": 19,
+   "partes": [
+    {
+     "clipe": 16,
+     "texto": "Quer levar o seu curso pra fora?#fora Comenta#com *EU#eu *QUERO#quero que#que2 a gente te chama.#chama"
+    }
+   ]
+  }
+ ]
+}
